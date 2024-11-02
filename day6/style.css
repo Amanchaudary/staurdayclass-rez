@@ -1,0 +1,22 @@
+div{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    color: red;
+    background-color:rgb(168, 134, 134);
+}
+.box{
+    color: green;
+}
+.box1{
+    color: rgb(26, 3, 20) !important;
+}
+.box2{
+    color: rgb(56, 12, 158);
+}
+.box3{
+    color: rgb(66, 39, 39);
+}
+#b3{
+    color: aqua;
+}
