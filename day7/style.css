@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.green-box{
+    margin: 10px;
+    border: 2px solid black;
+    height: 220px;
+    width: 300px;
+    background-color: green;
+}
+.blue-box{
+    border: 2px solid red;
+    width: 270px;
+    height: 180px;
+    margin: 15px 15px 15px 15px ;
+    background-color: blue;
+}
+p{
+    color: white;
+    margin: 10px;
+}
+.text-box{
+    margin: 10px;
+    color: white;
+    height: 30px;
+    width: 230px;
+    background-color: red;
+}

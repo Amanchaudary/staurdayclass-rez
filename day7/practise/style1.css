@@ -1,0 +1,12 @@
+.blue-box{
+    height: 200px;
+    width: 300px;
+    background-color: blue;
+}
+.circle{
+    margin-left: 150px;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(255, 0, 13);
+    border-radius: 90px;
+}
