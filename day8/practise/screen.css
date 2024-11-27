@@ -1,16 +1,38 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.box{
-    background-color: aquamarine;
-    height: 170px;
-    width: 230px;
+.box {
+  background-color: aquamarine;
+  height: 170px;
+  width: 230px;
 }
-.screen{
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-    gap: 4px;
-    align-items: center;
+.screen {
+  
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  gap: 50px;
+  align-items: center;
+}
+.items {
+  display: block;
+  text-align: center;
+}
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-bottom: 10px;
+}
+h2 {
+  margin-bottom: 12px;
+}
+ul {
+  list-style: none;
+}
+.btn{
+    color: rgb(20, 14, 14);
+    background-color: red;
+    border-radius: 5px;
+    margin-top: 10px;
 }

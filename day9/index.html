@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media quary</title>
+    <style>
+      .container {
+        background-color: red;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        margin: 10px;
+        color: white;
+        /*  content lai center banauna parda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (max-width: 500px){
+        .container{
+            flex-direction: column;
+            background-color: aqua; 
+            
+        }
+        .box{
+            height: 200px;
+            width: 200px;  
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+  </body>
+</html>

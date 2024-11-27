@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid practise</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns:repeat(4,100px);
+        grid-template-rows: repeat(4,100px);
+        gap:10px;
+      }
+      
+      .box {
+        font-size: 20px;
+        color: wheat;
+        border: 2px solid rgb(13, 13, 219);
+        background-color: rgb(218, 13, 13);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box1{
+        grid-column:1/5;
+        grid-row: 1/1;
+      }
+      .box5{
+        grid-column: 4/5;
+        grid-row: 2/4;
+      }
+      .box6{
+        grid-column: 1/4;
+        grid-row: 3/4;
+      }
+      
+      .box7{
+        grid-column: 1/5;
+        grid-row: 4/5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">Header</div>
+      <div class="box box2">box1</div>
+      <div class="box box3">box2</div>
+      <div class="box box4">box3</div>
+      <div class="box box5">sidebar</div>
+      <div class="box box6">main</div>
+      <div class="box box7">footer</div>
+    </div>
+  </body>
+</html>
