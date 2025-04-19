@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right,
+    rgb(242,56,242),rgb(200,255,0));
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    border-radius: 15px;
+    flex-direction: column;
+    background: rgb(83, 230, 235);
+    box-shadow: 0 5px 20px black;
+}
