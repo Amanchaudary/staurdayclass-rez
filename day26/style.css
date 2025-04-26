@@ -21,3 +21,50 @@ body{
     background: rgb(83, 230, 235);
     box-shadow: 0 5px 20px black;
 }
+input{
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-style: green;
+    border: none;
+    /* outline: none;   */
+    /* yo chai vitrabataborder off garn use */
+}
+
+button{
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(200,255,0);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+input:hover{
+    background-color: rgb(190, 199, 88);
+    transform: scale(1.1);
+    transition:all 0.5s ease-in-out;
+}
+
+.move-from-top{
+    animation: move 2s ease-in-out;
+}
+@keyframes move{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;;
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.move-from-right{
+    animation: right 2s ease-in-out;
+}
+@keyframes right{
+    form{
+    transform: translateX(100%);
+    }
+    to{
+    transform: translateX(0);
+    }
+}
