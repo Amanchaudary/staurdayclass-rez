@@ -4,73 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iphone Calc</title>
-    <style>
-      body {
-        background: linear-gradient(to right, rgb(46, 46, 46));
-        display: flex;
-        justify-content: center;
-      }
-      .calculator {
-        flex-direction: column;
-        width: 350px;
-        padding: 20px;
-        gap: 10px;
-        background: black;
-        box-shadow: 0 4px 15px rgb(0, 81%, 45%);
-      }
-      .buttons {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-      }
-      .zero {
-        grid-column: span 2;
-      }
-      button {
-        border: none;
-        height: 80px;
-        border-radius: 40px;
-        cursor: pointer;
-        background-color: gray;
-        color: white;
-        font-size: 36px;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .orange {
-        background-color: #fa832f;
-      }
-      button:hover{
-        background-color: #f7a832;
-      }
-      #display {
-        height: 40px;
-        width: 100%;
-        text-align: right;
-        background-color: black;
-        color: white;
-        border: none;
-        font-size: 30px;
-        margin-bottom: 30px;
-        padding: 12px;
-        overflow: hidden;
-        box-sizing: border-box;
-        border-radius: 20px;
-      }
-    </style>
   </head>
+  <style>
+    body {
+      background: linear-gradient(
+        to right,
+        rgb(245, 227, 39),
+        rgb(9, 145, 242)
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .calculator {
+      width: 350px;
+      padding: 20px;
+      background: rgb(55, 53, 53);
+      border-radius: 40px;
+      border: 1px solid white;
+      box-shadow: 0 4px 15px rgb(150, 4, 4);
+    }
+ 
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+ 
+    .zero {
+      grid-column: span 2;
+    }
+ 
+    button {
+      border: none;
+      height: 80px;
+      border-radius: 40px;
+      cursor: pointer;
+      background-color: grey;
+      color: white;
+      font-size: 36px;
+      transition: all 0.2s ease-in-out;
+    }
+ 
+    .orange {
+      background-color: #f7a832;
+    }
+ 
+    button:hover {
+      background-color: rgb(110, 109, 109);
+    }
+ 
+    #display {
+      height: 100px;
+      width: 100%;
+      text-align: right;
+      background-color: black;
+      color: white;
+      border: none;
+      font-size: 40px;
+      margin-bottom: 30px;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 20px;
+    }
+  </style>
+ 
   <body>
     <div class="calculator">
-      <input type="text" id="display" />
+      <input type="text"  id="display" />
       <div class="buttons">
-        <button>Ac</button>
-        <button>+/-</button>
+        <button onclick="clearAll()">AC</button>
+        <button onclick="deleteOneword()">Del</button>
         <button>%</button>
         <button class="orange">/</button>
         <button>7</button>
         <button>8</button>
         <button>9</button>
-        <button class="orange">*</button>
+        <button class="orange">x</button>
         <button>4</button>
         <button>5</button>
         <button>6</button>
@@ -84,5 +96,9 @@
         <button class="orange">=</button>
       </div>
     </div>
+ 
+    <script src="iphone.js"></script>
   </body>
 </html>
+ 
+ 
