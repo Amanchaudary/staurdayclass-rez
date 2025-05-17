@@ -1,3 +1,4 @@
+// for ac button for delete all
 function clearAll() {
   const display = document.getElementById('display');
   console.log(display);
@@ -27,5 +28,34 @@ display.value=displaychars.join('')
 }
 
 function addNumber(value){
- console.log(value);
+let display=document.getElementById('display')
+display.value=display.value+value
 }
+
+function calculate(){
+  const display=document.getElementById('display')
+  try {
+    display.value=eval(display.value)
+    // if(display.value==="Infinity"||display.value==="-Infinity"){
+    //   display.value='undefined'
+    // }
+  //  else if(display.value="-Infinity"){  
+  //     display.value="undefined"
+  //   }
+
+  // by switch statement  key value ma use grxa
+switch (display.value) {
+  case "Infinity":
+    display.value='undefined'
+  case "-Infinity":
+     display.value='undefined'
+    break;
+    default:
+      break;
+}  
+
+  } catch (error) {
+    display.value="Error"
+  }
+}
+
