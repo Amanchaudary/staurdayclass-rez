@@ -19,7 +19,25 @@
 
 
 // problem random 1-50 and random 1-100 sum ,devide,multiple
-let ran1=Math.floor(Math.random()*50)
+let ran1=Math.floor(Math.random()*50)+1  /* 0to49 +1 */
 console.log(ran1);
-let ran2=Math.floor(Math.random()*100)
+let ran2=Math.floor(Math.random()*100)+1
 console.log(ran2);
+// adding
+function add(ran1,ran2){
+    return ran1+ran2
+}
+let addNumber=add(ran1,ran2)
+console.log(addNumber);
+// substractiong
+function sub(ran1,ran2){
+    return ran1-ran2
+}
+let subNumber=sub(ran1,ran2)
+console.log(subNumber);
+
+function devide(ran1,ran2){
+    return ran1/ran2
+}
+let devideNumber=Math.floor(devide(ran1,ran2))
+console.log(devideNumber);
