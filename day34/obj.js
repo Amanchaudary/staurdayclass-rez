@@ -17,6 +17,7 @@ const obj = {
         console.log("helllo word");
         console.log(this.name);
         // arrow function ma this key use hudain
+        console.log("this.age");
     }
 
 }
