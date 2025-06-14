@@ -18,6 +18,7 @@ const obj = {
         console.log(this.name);
         // arrow function ma this key use hudain
         console.log("this.age");
+        
     }
 
 }
