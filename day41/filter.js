@@ -26,3 +26,13 @@ let com = companies.filter((companies) => {
   }
 });
 console.log(com);
+
+
+const filter1=companies.filter((company)=>(company.category==="Retail"))
+const filter2=companies.filter((company)=>{(company.category==="Retail")})
+const filter3=companies.filter((company)=>company.category==="Retail");
+const filter4=companies.filter(company=>company.category==="Retail");
+console.log(filter1);
+console.log(filter2);
+console.log(filter3);
+console.log(filter4);
