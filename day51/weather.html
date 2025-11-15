@@ -1,14 +1,92 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Api</title>
 </head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        margin-top: 40px;
+        width: 500px;
+        background-color: aqua;
+        border: 1px solid greenyellow;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    button {
+        color: white;
+        background-color: red;
+        border: none;
+        padding: 10px;
+        border-radius: 15px;
+    }
+</style>
+
 <body>
-    
-    <div id="name"></div>
-    <div id="region"></div>
+    <header>
+        <div class="form">
+             <h1>Check Weather</h1>
+            <div class="weather-form">
+                <label for="city">Inter City</label>
+                <input type="text" id="city" />
+                <button type="submit">submit</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="name"></div>
+            <div id="country"></div>
+            <div id="localtime"></div>
+            <div id="temperature"></div>
+            <div id="text"></div>
+            <img src="" alt="" id="icon" />
+        </div>
+    </header>
     <script src="weatherapi.js"></script>
 </body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <img src="" alt="" />
+    <h3></h3>
+    <h1></h1> -->
+    <h2>check weather</h2>
+    <div class="form">
+      <form id="weatherForm">
+        <label for="city">Enter city name</label>
+        <input type="text" name="" id="city" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="container" id="container">
+      <div id="name"></div>
+      <div id="country"></div>
+      <div id="localtime"></div>
+      <div id="temp"></div>
+      <div id="condition"></div>
+      <img src="" id="icon" />
+    </div>
+    <script src="weatherapi.js"></script>
+  </body>
 </html>
+ 

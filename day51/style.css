@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container {
+    /* margin-top: 40px; */
+    width: 500px;
+    text-align: center;
+    border: 1px solid greenyellow;
+    background-color: aqua;
+    border-radius: 15px;
+    display: none;
+}
+
+img {
+    width: 100px;
+}
+
+button {
+    color: white;
+    background-color: orangered;
+    border: none;
+    /* font-size: 10px; */
+    padding: 10px;
+    border-radius: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: bisque;
+    /* background-color: red; */
+}
