@@ -1,5 +1,6 @@
 // npm i express
 
+import bodyParser from "body-parser";
 import express from "express";
 const app = express();
 const PORT = 3000;
@@ -47,23 +48,36 @@ app.get("/random", (req, res) => {
   res.json(programmingJokes[random]);
 });
 
-
 // 4 filter joke by type
 app.get("/filter", (req, res) => {
   const jokeType = req.query.jokeType;
-  const filterjokes=programmingJokes.filter(joke=> {
-   return joke.jokeType === jokeType;
+  const filterjokes = programmingJokes.filter((joke) => {
+    return joke.jokeType === jokeType;
   });
   res.json(filterjokes);
 });
 // 5 serach by textJoke
 
-app.get("/search",(req,res)=>{
-    const jokeText=req.query.jokeText
-    const searchTest=programmingJokes.filter((joke) =>{
-        return joke.jokeText.includes(jokeText)})
-    res.json(searchTest)
-})
+app.get("/search", (req, res) => {
+  const jokeText = req.query.jokeText;
+  const searchTest = programmingJokes.filter((joke) => {
+    return joke.jokeText.includes(jokeText);
+  });
+  res.json(searchTest);
+});
+// 6 post method
+app.use(bodyParser.urlencoded({extended:true}))
+app.post("/jokes", (req, res) => {
+  const newJoke = {
+    id: programmingJokes.length + 1,
+    jokeText: req.body.jokeText,
+    jokeType: req.body.jokeType,
+  };
+  programmingJokes.push(newJoke);
+  console.log(programmingJokes);
+  res.json(newJoke);
+});
+
 const programmingJokes = [
   {
     id: 1,
