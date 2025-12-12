@@ -78,6 +78,45 @@ app.post("/jokes", (req, res) => {
   res.json(newJoke);
 });
 
+//c create post
+// r read get
+// u update update
+// d delete delete
+
+//update put patch
+app.put("/jokes/:id", (req, res) => {// "1"
+    const paramsId = parseInt(req.params.id) //"1"
+    const updateJoke = {
+        id: paramsId, //1
+        jokeText: req.body.jokeText,
+        jokeType: req.body.jokeType
+    }
+    const indexFound = programmingJokes.findIndex(joke => joke.id === paramsId) //0 1==='1'
+    programmingJokes[indexFound] = updateJoke //0
+    console.log(programmingJokes[indexFound])
+    res.json(updateJoke)
+    // const jokeFound = programmingJokes.find(joke => joke.id == ID) //1==1
+    //  {
+    //         id: 1,
+    //         jokeText: "Why do programmers prefer dark mode? Because light attracts bugs.",
+    //         jokeType: "Debugging"
+    //     }
+ 
+    // if (!jokeFound) {
+    //     return {
+    //         message: "not found"
+    //     }
+    // }
+ 
+    // jokeFound.jokeText = updateJoke.jokeText
+    // jokeFound.jokeType = updateJoke.jokeType
+})
+ 
+//patch method
+app.patch('/jokes/:id', (req, res) => {
+ 
+})
+ 
 const programmingJokes = [
   {
     id: 1,
