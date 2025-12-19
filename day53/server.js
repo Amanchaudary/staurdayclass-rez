@@ -107,16 +107,17 @@ app.put("/jokes/:id", (req, res) => {// "1"
     //         message: "not found"
     //     }
     // }
- 
     // jokeFound.jokeText = updateJoke.jokeText
     // jokeFound.jokeType = updateJoke.jokeType
 })
  
 //patch method
-app.patch('/jokes/:id', (req, res) => {
- 
+//  delete method
+app.delete("/jokes/:id",(req,res)=>{
+const deleteId=parseInt(req.params.id)
+const payojoke=programmingJokes.find(joke=>joke.id===deleteId)
 })
- 
+
 const programmingJokes = [
   {
     id: 1,
