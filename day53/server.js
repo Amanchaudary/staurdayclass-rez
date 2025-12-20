@@ -66,7 +66,7 @@ app.get("/search", (req, res) => {
   res.json(searchTest);
 });
 // 6 post method
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/jokes", (req, res) => {
   const newJoke = {
     id: programmingJokes.length + 1,
@@ -84,41 +84,65 @@ app.post("/jokes", (req, res) => {
 // d delete delete
 
 //update put patch
-app.put("/jokes/:id", (req, res) => {// "1"
-    const paramsId = parseInt(req.params.id) //"1"
-    const updateJoke = {
-        id: paramsId, //1
-        jokeText: req.body.jokeText,
-        jokeType: req.body.jokeType
-    }
-    const indexFound = programmingJokes.findIndex(joke => joke.id === paramsId) //0 1==='1'
-    programmingJokes[indexFound] = updateJoke //0
-    console.log(programmingJokes[indexFound])
-    res.json(updateJoke)
-    // const jokeFound = programmingJokes.find(joke => joke.id == ID) //1==1
-    //  {
-    //         id: 1,
-    //         jokeText: "Why do programmers prefer dark mode? Because light attracts bugs.",
-    //         jokeType: "Debugging"
-    //     }
- 
-    // if (!jokeFound) {
-    //     return {
-    //         message: "not found"
-    //     }
-    // }
-    // jokeFound.jokeText = updateJoke.jokeText
-    // jokeFound.jokeType = updateJoke.jokeType
-})
- 
-//patch method
-//  delete method
-app.delete("/jokes/:id",(req,res)=>{
-const deleteId=parseInt(req.params.id)
-const payojoke=programmingJokes.find(joke=>joke.id===deleteId)
-})
+app.put("/jokes/:id", (req, res) => {
+  // "1"
+  const paramsId = parseInt(req.params.id); //"1"
+  const updateJoke = {
+    id: paramsId, //1
+    jokeText: req.body.jokeText,
+    jokeType: req.body.jokeType,
+  };
+  const indexFound = programmingJokes.findIndex((joke) => joke.id === paramsId); //0 1==='1'
+  programmingJokes[indexFound] = updateJoke; //0
+  console.log(programmingJokes[indexFound]);
+  res.json(updateJoke);
+  // const jokeFound = programmingJokes.find(joke => joke.id == ID) //1==1
+  //  {
+  //         id: 1,
+  //         jokeText: "Why do programmers prefer dark mode? Because light attracts bugs.",
+  //         jokeType: "Debugging"
+  //     }
 
-const programmingJokes = [
+  // if (!jokeFound) {
+  //     return {
+  //         message: "not found"
+  //     }
+  // }
+  // jokeFound.jokeText = updateJoke.jokeText
+  // jokeFound.jokeType = updateJoke.jokeType
+});
+//  delete method
+//delete
+app.delete("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const indexVetayo = programmingJokes.findIndex((joke) => joke.id === id);
+  if (indexVetayo > -1) {
+    programmingJokes.splice(indexVetayo, 1); //0 1
+    res.sendStatus(200);
+  } else {
+    res.json({
+      error: `joke of ${id} not found`,
+    });
+  }
+});
+//delete all
+//masterkey
+const masterKey = "hello123";
+app.delete("/all", (req, res) => {
+  const userKey = req.query.key;
+  if (userKey === masterKey) {
+    programmingJokes = [];
+    res.json({
+      message: "all jokes are deleted",
+    });
+  } else {
+    res.json({
+      error: "you are not authorized",
+    });
+  }
+});
+
+let programmingJokes = [
   {
     id: 1,
     jokeText:
